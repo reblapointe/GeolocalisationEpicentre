@@ -1,3 +1,8 @@
+'''
+Permet de géolocaliser l'épicentre d'un tremblement de terre à partir de la distance
+qui le sépare de trois points (Jonquière, Roberval et Dolbeau)
+'''
+
 from triangle import Triangle
 from point import Point
 
@@ -23,5 +28,3 @@ print(sag_lac.description())
 
 arvida = jonquiere
 arvida.nom = 'arvida' #jonquiere.nom a-t-il changé?
-
-
