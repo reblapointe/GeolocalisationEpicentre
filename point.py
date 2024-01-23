@@ -1,11 +1,13 @@
 
 class Point:
-    def __init__(self, descriptif:str = "origine", x:float = 0, y:float = 0):
-        self.descriptif = descriptif
+    '''Un point nommé dans le plan'''
+    def __init__(self, nom:str = "origine", x:float = 0, y:float = 0):
+        self.nom = nom
         self.x = x
         self.y = y
 
-    def __str__(self):
-        return f"{self.descriptif} ({self.x}, {self.y})"
+    def description(self):
+        '''Retourne une description textuelle du point'''
+        return f"{self.nom} ({self.x}, {self.y})"
 
     

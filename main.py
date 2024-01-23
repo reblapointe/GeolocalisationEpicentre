@@ -1,17 +1,27 @@
 from triangle import Triangle
 from point import Point
 
-desArpenteurs = Triangle(Point("Jonquiere", 100, 0), Point("Alma", 0, 0), Point("Dolbeau", 200, 200))
 
-print(f"Entrez la distance à {desArpenteurs.point_a.descriptif}")
+jonquiere = Point("Jonquiere", 100, 0)
+roberval = Point("Roberval", 0, 0)
+dolbeau = Point("Dolbeau", 200, 200)
+
+sag_lac = Triangle(jonquiere, roberval, dolbeau)
+
+print(f"Entrez la distance à {sag_lac.point_a.nom}")
 d1 = int(input())
 
-print(f"Entrez la distance à {desArpenteurs.point_b.descriptif}")
+print(f"Entrez la distance à {sag_lac.point_b.nom}")
 d2 = int(input())
 
-print(f"Entrez la distance à {desArpenteurs.point_c.descriptif}")
+print(f"Entrez la distance à {sag_lac.point_c.nom}")
 d3 = int(input())
 
-epicentre = desArpenteurs.trianguler(d1, d2, d3)
-print(epicentre)
-print(desArpenteurs)
+epicentre = sag_lac.trianguler(d1, d2, d3)
+print(epicentre.description())
+print(sag_lac.description())
+
+arvida = jonquiere
+arvida.nom = 'arvida' #jonquiere.nom a-t-il changé?
+
+
