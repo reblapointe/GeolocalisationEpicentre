@@ -13,7 +13,11 @@ class Triangle:
     PRECISION = 0.001   
 
     def __init__(self, point_a:Point, point_b:Point, point_c:Point):
-        '''Définit les trois points a,b,c formant le triangle dans le plan'''
+        '''
+        Définit les trois points a, b, c formant le triangle dans le plan.
+        
+        Si les trois points ne forment pas un triangle, une exception ValueError est lancée.
+        '''
         if (Triangle.est_valide(point_a, point_b, point_c)):
             self.point_a = point_a
             self.point_b = point_b

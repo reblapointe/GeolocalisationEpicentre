@@ -6,25 +6,28 @@ qui le sépare de trois points (Jonquière, Roberval et Dolbeau)
 from triangle import Triangle
 from point import Point
 
+def geolocaliser():
+    jonquiere = Point("Jonquiere", 100, 0)
+    roberval = Point("Roberval", 0, 0)
+    dolbeau = Point("Dolbeau", 200, 200)
 
-jonquiere = Point("Jonquiere", 100, 0)
-roberval = Point("Roberval", 0, 0)
-dolbeau = Point("Dolbeau", 200, 200)
+    sag_lac = Triangle(jonquiere, roberval, dolbeau)
 
-sag_lac = Triangle(jonquiere, roberval, dolbeau)
+    print(f"Entrez la distance à {sag_lac.point_a.nom}")
+    d1 = int(input())
 
-print(f"Entrez la distance à {sag_lac.point_a.nom}")
-d1 = int(input())
+    print(f"Entrez la distance à {sag_lac.point_b.nom}")
+    d2 = int(input())
 
-print(f"Entrez la distance à {sag_lac.point_b.nom}")
-d2 = int(input())
+    print(f"Entrez la distance à {sag_lac.point_c.nom}")
+    d3 = int(input())
 
-print(f"Entrez la distance à {sag_lac.point_c.nom}")
-d3 = int(input())
+    epicentre = sag_lac.trianguler(d1, d2, d3)
+    print(epicentre.description())
+    print(sag_lac.description())
 
-epicentre = sag_lac.trianguler(d1, d2, d3)
-print(epicentre.description())
-print(sag_lac.description())
+    arvida = jonquiere
+    arvida.nom = 'arvida' #jonquiere.nom a-t-il changé?
 
-arvida = jonquiere
-arvida.nom = 'arvida' #jonquiere.nom a-t-il changé?
+if __name__ == '__main__':
+    geolocaliser()
