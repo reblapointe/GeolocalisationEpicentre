@@ -5,7 +5,7 @@ qui le sépare de trois points (Jonquière, Roberval et Dolbeau)
 
 from triangle import Triangle
 from point import Point
-
+#lfksdkfsdkjdsffsdjkfsdfdsjfsdfdkjs
 def geolocaliser():
     jonquiere = Point("Jonquiere", 100, 0)
     roberval = Point("Roberval", 0, 0)
